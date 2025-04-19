@@ -30,5 +30,22 @@ taskDateTime.value = "";
 }
 //editTask(button)
 function editTask(button){
-    const
+    const taskItem = button.closest("li");
+    const taskText = prompt("Edit task:", taskItem.querySelector("strong").textContent);
+    const taskTime = prompt("edit date/time:", taskItem.querySelector("small").textContent);
+    if (taskText !== null && taskTime !== null){
+       taskItem.querySelector("strong").textContent = taskText;
+       taskItem.querySelector("small").textContent = taskTime;
+    }
 }
+//toggleComplete(button)
+function toggleCompleteTask(button){
+    const taskItem = button.closest("li");
+    taskItem.classList.toggle("completed");
+}
+//deleteTask button
+function deleteTask(button){
+    const taskItem = button.closest("li");
+    taskItem.remove();
+}
+
