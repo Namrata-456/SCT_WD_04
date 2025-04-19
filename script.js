@@ -2,7 +2,7 @@ function addTask(){
  const taskInput=document.getElementById("taskInput");
  const taskDateTime = document.getElementById("taskDateTime");
  
- if (taskInput.value.trim()==="")return;//removes spaces and return of no task is added only space is 
+ if (taskInput.value.trim()==="")return;
  const taskText = taskInput.value;
  const taskTime = taskDateTime.value;
 
